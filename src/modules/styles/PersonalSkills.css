@@ -1,0 +1,31 @@
+@import '../../styles/Colors.css';
+
+.containerPersonalSkills{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.wrapperPersonalSkills{
+    padding: 12rem 15rem;
+}
+
+.sub-container{
+    width: 100%;
+}
+
+
+
+@media (max-width: 930px) {
+    .wrapperPersonalSkills {
+        padding: 10rem 1rem;
+        text-align: center;
+    }
+    .wrapperPersonalSkills *{
+        text-align: center;
+    }
+
+}
+
+

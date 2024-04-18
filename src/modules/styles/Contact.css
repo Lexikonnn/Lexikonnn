@@ -1,0 +1,10 @@
+.container-contact{
+display: flex;
+justify-content: center;
+padding-top: 10rem;
+}
+
+.wrapper-contact{
+    position: absolute;
+    bottom: 4rem;
+}

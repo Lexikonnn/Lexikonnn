@@ -1,0 +1,68 @@
+@import './Colors.css';
+
+*{
+    user-select: none;
+}
+
+body{
+    background-color: var(--black);
+}   
+
+.section {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    width: 100%;
+    height: 67vh;
+    padding-left: 3rem ;
+
+    position: fixed;
+}
+
+.section-mask {
+    position: absolute;
+    inset: 0;
+
+    -webkit-mask: url('../../public/images/home-img.png');
+    mask: url('../../public/images/home-img.png');
+
+}
+
+
+.section-content {
+    background-color: var(--black);
+
+    padding: 8rem 5rem;
+    min-height: fit-content;
+
+}
+
+.svg-container{
+    position: absolute;
+    
+    width: 100%;
+    max-width: 100vh;
+    height: auto;
+
+}
+
+
+@media (max-width: 930px) {
+    .section {
+        justify-content: center;
+        align-items: center;
+
+        height: 70vh;
+        padding: 5rem 0;
+    }
+
+    .section-content{
+        padding: 5rem 0;
+
+    }
+
+    #resume{
+        padding-bottom: 0;
+    }
+}

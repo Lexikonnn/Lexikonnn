@@ -1,0 +1,38 @@
+{
+    "header": {
+        "home": "Domů",
+        "about": "O mně",
+        "resume": "Resumé",
+        "contact": "Kontakt"
+    },
+    "about": {
+        "about": "O MNĚ",
+        "article": "Jsem junior v oblasti vývoje front-endu s vášní pro tvorbu interaktivních a uživatelsky přívětivých webových stránek. Moje pevné základy v HTML, CSS a JavaScriptu mi umožňují budovat stránky s elegantním designem a plynulou funkcionalitou. Nicméně se neustále snažím zlepšovat a přizpůsobovat se novým trendům a technologiím. Kromě technických dovedností mám také povědomí o základech UX/UI designu. Mám hluboký respekt k uživatelům a jejich potřebám a proto vždy usiluji o vytváření webových stránek, které jsou intuitivní a snadno použitelné."
+    },
+    "personal":{
+        "first":"Flexibilní",
+        "secound": "Zodpovědný",
+        "third": "Touha se vzdělávat",
+        "fourth": "Připraven na výzvy"
+    },
+    "resume": {
+        "abilities": "SCHOPNOSTI",
+        "skills": "ZNALOSTI",
+        "languages": "JAZYKY",
+        "czech": "Čeština",
+        "english": "Angličtina",
+        "experience": "ZKUŠENOSTI",
+        "education": "VZDĚLÁNÍ",
+        "school": "Střední průmyslová škola elektrotechniky a informatiky Ostrava",
+        "do": "ČÍM SE ZABÍVÁM?",
+        "hobbies": "KONÍČCI"
+    },
+    "contactme":{
+        "contact": "NAPIŠTE MI",
+        "name": "Jméno...",
+        "message": "Váše zpráva...",
+        "send": "Poslat!",
+        "error": "Prosím vyplňte údaje!",
+        "ok": "Děkuji za zprávu."
+    }
+}
