@@ -39,14 +39,16 @@ const About = () => {
                     <h4 className="secound-text">h.skrzeczek@gmail.com</h4>
                 </div>
                 <div className="wrapper-about-content">
-                    <p className="basic-text">
+                    <p id="about-padding" className="basic-text">
                         {t("about.article")}
                     </p>
                 </div>
             </div>
-            <div className='container-row'>
-                <div className='container-portrait'>
-                    <img className='portrait' src={portrait} alt='portrait' />
+            <div className='container-row portrait-flex'>
+                <div className='container-outline'>
+                    <div className='container-portrait'>
+                        <img className='portrait' src={portrait} alt='portrait' />
+                    </div>
                 </div>
             </div>
         </div>

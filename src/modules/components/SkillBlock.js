@@ -25,35 +25,40 @@ const SkillBlock = () => {
                     });
                     setAnimationStarted(true);
                 } else if (!entry.isIntersecting && animationStarted) {
-                    // Pokud už je animace spuštěna a uživatel opustí zorné pole, necháme skill bary viditelné
+                    
                     return;
                 }
             });
         }, options);
 
-        if (skillsContainerRef.current) {
-            skillsObserver.observe(skillsContainerRef.current);
-        }
+        const currentRef = skillsContainerRef.current;
 
+        if (currentRef) {
+            skillsObserver.observe(currentRef);
+        }
+    
         return () => {
-            if (skillsContainerRef.current) {
-                skillsObserver.unobserve(skillsContainerRef.current);
+            if (currentRef) {
+                skillsObserver.unobserve(currentRef);
             }
         };
     }, [animationStarted]);
 
+
+    
+
     const animateBlueBar = (bar) => {
         if (bar && bar.dataset) {
             const percent = parseFloat(bar.dataset.percent);
-            const duration = 1000; // Doba trvání animace v milisekundách
-            let startTime; // Přepíšeme na let, abychom mohli měnit hodnotu
+            const duration = 1000;
+            let startTime;
 
             const animationFrame = (currentTime) => {
                 if (!startTime) startTime = currentTime;
                 const elapsedTime = currentTime - startTime;
                 let width = (elapsedTime / duration) * percent;
 
-                // Ochrana proti překročení 100%
+                
                 width = Math.min(width, 100);
 
                 bar.style.width = width + '%';
@@ -121,8 +126,8 @@ const SkillBlock = () => {
                                 <div className='skill-row'>
                                     <div id="code-skill" className="skill">
 
-                                        <div className="skill-bar  skill1" data-percent="34">
-                                            <span className="skill-count1">34%</span>
+                                        <div className="skill-bar  skill1" data-percent="25">
+                                            <span className="skill-count1">25%</span>
                                         </div>
                                     </div>
                                 </div>

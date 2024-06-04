@@ -77,10 +77,16 @@
         justify-content: center;
     }
 
+    #about-padding{
+        padding: 0 30px 0 30px;
+        
+    }
+
     .wrapper-about-content {
         width: 100%;
         text-align: center;
-        padding-right: 0;
+        padding: 0;
+        margin-bottom: 80px;
     }
 
     .container-footer {
@@ -95,22 +101,94 @@
         background: none;
     }
 
-    .container-portrait {
-        position: relative;
-        right: 0;
-        left: 0;
-
+    .portrait-flex{
+        display: flex;
+        justify-content: center;
     }
 
     .portrait {
-        border: var(--blue) 3px solid;
-        padding: 0 6rem;
+        position: absolute;
+        z-index: 1;
+        scale: 140%;
+        padding: 0 6rem 70px;
         margin-top: 3rem;
-        height: 40vh;
+        height: 300px;
+    }
+
+    .container-portrait {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        overflow: hidden;
         border-radius: 100%;
-        background: linear-gradient(180deg, rgba(91,173,232,0) 40%, rgba(91,173,232,0.3338469176733193) 100%);
+    }
+
+    .container-portrait::before{
+        content:' ';
+        position: absolute;
+        height: 100%;
+        width: 190px;
+        background-color: var(--white);
+        animation: animate 5000ms linear infinite;
+    }
+
+    .container-portrait::after{
+        content: ' ';
+        position: absolute;
+        inset:8px;
+        background-color: var(--black);
+        border-radius: 100%;
+    }
+
+    .container-outline {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        overflow: hidden;
+        padding: 20px;
+        border-radius: 100%;
+    }
+
+    .container-outline::before{
+        content:' ';
+        position: absolute;
+        z-index: -2;
+        height: 500px;
+        width: 150px;
+        left: 30%;
+        bottom:-20px;
+        background-color: var(--blue);
+        animation: rev-animate 5000ms linear infinite;
+    }
+
+    .container-outline::after{
+        content: ' ';
+        position: absolute;
+        background-color: var(--black);
+        z-index: -1;
+        inset: 2px;
+        border-radius: 100%;
+    }
 
 
+
+    @keyframes animate{
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+
+
+    @keyframes rev-animate{
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(-360deg);
+        }
     }
 
 }

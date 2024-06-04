@@ -13,8 +13,8 @@
     justify-content: center;
     align-items: center;
     background-color: #1D1D1D;
-    width: 325px;
-    height: 325px;
+    width: calc(325px * 1.05);
+    height: calc(325px * 1.05);
     border: 3px solid var(--white);
     position: relative;
     padding: 20px;
@@ -26,18 +26,16 @@
 
 .rotated-border {
     position: absolute;
-    top: -5px;
+    top: -8px;
     left: -5px;
-    width: calc(100%);
-    height: calc(100%);
+    width: calc(100% * 1.02);
+    height: calc(100% * 1.02);
     border: 4px solid var(--blue);
-    /* Modrá barva */
     transform: rotate(3deg);
     z-index: -1;
-    box-shadow:
-        0 0 20px rgba(30, 136, 229, 0.8)
-        
+    box-shadow: 0 0 20px rgba(30, 136, 229, 0.8);
 }
+
 
 .card form {
     margin-top: 1.5rem;
@@ -47,6 +45,7 @@
 .card form input {
     color: var(--white);
     letter-spacing: 0.5px;
+    font-size: 16px;
     background-color: var(--black);
     padding: 8px 7px;
     margin: 0.3rem 0 0 0;
@@ -57,20 +56,21 @@
     font-family: 'Roboto', sans-serif;
     color: var(--white);
     letter-spacing: 0.5px;
+    font-size: 16px;
     background-color: var(--black);
     margin: 0.3rem 0 1.5rem 0;
     padding: 8px 7px;
     border: none;
-    width: 10.5rem;
+    width: 12.5rem;
     height: 4rem;
 }
 
 input:focus {
-    outline: none;
+    outline: 2px solid var(--blue);
 }
 
 textarea:focus {
-    outline: none;
+    outline: 2px solid var(--blue);
 }
 
 

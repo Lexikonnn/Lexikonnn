@@ -13,11 +13,15 @@ const Hobbies = () => {
                     <div className='container-hobbies'>
                         <div className='wrapper-hobbies'>
                             <div className='icon-border'><FontAwesomeIcon icon={faCamera} size="lg" style={{ color: "#f8f8f8" }} /></div>
+                            <p className='absolute-description basic-text' hobby-type="one">Photo</p>
                             <div className='icon-border'><FontAwesomeIcon icon={faPersonHiking} size="lg" style={{ color: "#f8f8f8" }} /></div>
+                            <p className='absolute-description basic-text' hobby-type="two">Hiking</p>
                         </div>
                         <div className='wrapper-hobbies'>
                             <div className='icon-border'><FontAwesomeIcon icon={faPalette} size="lg" style={{ color: "#f8f8f8" }} /></div>
+                            <p className='absolute-description basic-text' hobby-type="three">Design</p>
                             <div className='icon-border'><FontAwesomeIcon icon={faGamepad} size="lg" style={{ color: "#f8f8f8" }} /></div>
+                            <p className='absolute-description basic-text' hobby-type="four">gaming</p>
                         </div>
                     </div>
                 </div>

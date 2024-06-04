@@ -66,6 +66,12 @@ ul {
     text-decoration: none;
 }
 
+ul button{
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
 li {
     background-color: var(--black);
     list-style: none;
@@ -79,6 +85,7 @@ li {
 .link {
     padding: 1rem 1rem;
     margin-left: 1rem;
+    font-size: 1.5rem;
 
     text-decoration: none;
     color: var(--white);
@@ -100,8 +107,9 @@ li {
 
     color: var(--white);
     background-color: var(--black);
-    padding: 0 0.5rem;
+    padding: 0 1rem 0 0.2rem;
     font-weight: 400;
+    font-size: 1.4rem;
 }
 
 #menuToggle input {
@@ -142,6 +150,7 @@ li {
 .contact .preset{
     color: var(--blue);
     font-weight: 300;
+    padding-right: 0.2rem;
     font-size: calc(90%);
 }
 
@@ -324,6 +333,14 @@ li {
         font-size: 22px;
     }
 
+    #menu{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .link-wrapper{
+        text-align: left;
+    }
 
     #menuToggle input:checked~ul {
         transform: none;

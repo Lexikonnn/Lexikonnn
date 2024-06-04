@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Button from './Button';
+import ButtonLinear from './ButtonLinear';
 import Axios from 'axios';
 import translation from '../components/Translation';
 
@@ -19,6 +19,7 @@ const EmailForm = () => {
         if (!name || !email || !message) {
             const errorMessage = t("contactme.error"); 
             setError(errorMessage);
+            setOk("");
             return;
         } else {
             const okMessage = t("contactme.ok");
@@ -66,7 +67,7 @@ const EmailForm = () => {
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
             />
-            <Button text={t("contactme.send")} />
+            <ButtonLinear text={t("contactme.send")} />
         </form>
     );
 };

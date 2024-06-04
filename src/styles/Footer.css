@@ -27,3 +27,11 @@ body {
     padding-bottom: 100px;
     min-height: 200vh;
 }
+
+
+@media (max-width: 930px){
+    .custom-shape-divider-bottom-1712580221{
+        z-index: -1;
+        background-color: #1D1D1D;
+    }
+}

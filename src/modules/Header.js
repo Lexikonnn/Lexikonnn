@@ -3,17 +3,18 @@ import '../styles/Text.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMobileScreenButton } from '@fortawesome/free-solid-svg-icons'
 import React, { useEffect } from 'react';
-import UkFlag from '../assets/Uk-flag.svg'
-import CzFlag from '../assets/czech-flag.svg'
+//import UkFlag from '../assets/Uk-flag.svg'
+//import CzFlag from '../assets/czech-flag.svg'
 import translation from './components/Translation';
 
-const Header = ({ scrollToAbout, scrollToResume, scrollToHome }) => {
-
-    const { t, changeLanguage } = translation();
+const Header = ({ scrollToAbout, scrollToResume, scrollToHome, scrollToProcess }) => {
+            
+    const { t,  } = translation(); //changeLanguage
 
     useEffect(() => {
         const closeMenu = (event) => {
             const menuToggle = document.getElementById('menuToggle');
+
             if (menuToggle && !menuToggle.contains(event.target)) {
                 const inputCheckbox = document.querySelector('#menuToggle input[type="checkbox"]');
                 if (inputCheckbox && inputCheckbox.checked) {
@@ -39,30 +40,31 @@ const Header = ({ scrollToAbout, scrollToResume, scrollToHome }) => {
                     <span className='bar'></span>
                     <span className='bar'></span>
                     <ul id='menu'>
-                        <a className='link-wrapper'><li className="link" onClick={scrollToHome}>{t("header.home")}</li></a>
-                        <a className='link-wrapper'><li className="link" onClick={scrollToAbout}>{t("header.about")}</li></a>
-                        <a className='link-wrapper'><li className="link" onClick={scrollToResume}>{t("header.resume")}</li></a>
-                        <div className='flag-container-mobile'>
+                        <button className='link-wrapper'><li className="link" onClick={scrollToHome}>{t("header.home")}</li></button>
+                        <button className='link-wrapper'><li className="link" onClick={scrollToAbout}>{t("header.about")}</li></button>
+                        <button className='link-wrapper'><li className="link" onClick={scrollToResume}>{t("header.resume")}</li></button>
+                        <button className='link-wrapper'><li className="link" onClick={scrollToProcess}>{t("header.process")}</li></button>
+                        {/*<div className='flag-container-mobile'>
                             <img onClick={() => changeLanguage("cz")} className='flag' src={CzFlag} alt='CzFlag' />
                             <img onClick={() => changeLanguage("en")} className='flag' src={UkFlag} alt='UkFlag' />
-                        </div>
+                        </div>*/}
                         <div className='mobile-container'>
                             <FontAwesomeIcon icon={faMobileScreenButton} style={{ color: "#f8f8f8" }} />
-                            <a className="mobile"><span className='preset'>+420 </span> 731 002 086</a>
+                            <p className="mobile"><span className='preset'>+420 </span> 731 002 086</p>
                         </div>
                     </ul>
                 </div>
             </nav>
             <div className='header-end'>
 
-                <div className='flag-container'>
+                {/*<div className='flag-container'>
                     <img onClick={() => changeLanguage("cz")} className='flag' src={CzFlag} alt='CzFlag' />
                     <img onClick={() => changeLanguage("en")} className='flag' src={UkFlag} alt='UkFlag' />
-                </div>
+                    </div>*/}
                 <div className="contact-wrapper">
 
-                    <FontAwesomeIcon icon={faMobileScreenButton} style={{ color: "#f8f8f8" }} />
-                    <a className="contact"><span className='preset'>+420 </span> 731 002 086</a>
+                    <FontAwesomeIcon icon={faMobileScreenButton} style={{ color: "#f8f8f8", scale: "125%", paddingTop: "0.2rem" }} />
+                    <p className="contact"><span className='preset'>+420 </span> 731 002 086</p>
                 </div>
             </div>
 
