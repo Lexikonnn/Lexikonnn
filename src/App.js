@@ -20,6 +20,8 @@ function App() {
   const contactRef = useRef(null);
   const processRef = useRef(null);
 
+  document.title = "Jan Skrzeczek";
+
   const handleScrollToHome = () => {
     homeRef.current.scrollIntoView({ behavior: 'smooth' });
   };
@@ -42,7 +44,6 @@ function App() {
 
   return (
     <div className="App">
-      
       <div className="section-parent" ref={homeRef}>
         <div className="section-mask">
           <div className="section">
