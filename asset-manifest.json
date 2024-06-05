@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Lexikonn/static/css/main.f42333e1.css",
-    "main.js": "/Lexikonn/static/js/main.912c3357.js",
-    "static/media/portrait.png": "/Lexikonn/static/media/portrait.4f8a73f44da11c911c99.png",
-    "static/media/home-img.png": "/Lexikonn/static/media/home-img.2580e507fd56af4191b4.png",
-    "index.html": "/Lexikonn/index.html",
-    "main.f42333e1.css.map": "/Lexikonn/static/css/main.f42333e1.css.map",
-    "main.912c3357.js.map": "/Lexikonn/static/js/main.912c3357.js.map"
+    "main.css": "/Lexikonnn/static/css/main.fc912e17.css",
+    "main.js": "/Lexikonnn/static/js/main.ae4d8e02.js",
+    "static/media/portrait.png": "/Lexikonnn/static/media/portrait.4f8a73f44da11c911c99.png",
+    "static/media/home-img.png": "/Lexikonnn/static/media/home-img.2580e507fd56af4191b4.png",
+    "index.html": "/Lexikonnn/index.html",
+    "main.fc912e17.css.map": "/Lexikonnn/static/css/main.fc912e17.css.map",
+    "main.ae4d8e02.js.map": "/Lexikonnn/static/js/main.ae4d8e02.js.map"
   },
   "entrypoints": [
-    "static/css/main.f42333e1.css",
-    "static/js/main.912c3357.js"
+    "static/css/main.fc912e17.css",
+    "static/js/main.ae4d8e02.js"
   ]
 }
