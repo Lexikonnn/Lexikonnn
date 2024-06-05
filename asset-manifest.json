@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Lexikonn/static/css/main.f42333e1.css",
+    "main.js": "/Lexikonn/static/js/main.912c3357.js",
+    "static/media/portrait.png": "/Lexikonn/static/media/portrait.4f8a73f44da11c911c99.png",
+    "static/media/home-img.png": "/Lexikonn/static/media/home-img.2580e507fd56af4191b4.png",
+    "index.html": "/Lexikonn/index.html",
+    "main.f42333e1.css.map": "/Lexikonn/static/css/main.f42333e1.css.map",
+    "main.912c3357.js.map": "/Lexikonn/static/js/main.912c3357.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f42333e1.css",
+    "static/js/main.912c3357.js"
+  ]
+}
