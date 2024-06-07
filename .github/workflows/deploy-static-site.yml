@@ -42,7 +42,7 @@ jobs:
         run: npm install
 
       - name: Get GitHub Pages URL
-        run: echo "PUBLIC_URL=https://janskrzeczek.com" >> $GITHUB_ENV
+        run: echo "PUBLIC_URL=http://janskrzeczek.com" >> $GITHUB_ENV
 
       - name: Build the project
         run: PUBLIC_URL=${{ env.PUBLIC_URL }} CI=false npm run build
