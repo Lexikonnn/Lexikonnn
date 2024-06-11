@@ -1,6 +1,7 @@
 Hi, I am Honza 😄 a junior front end developer.
 I am passionate about creating web applications and constantly strive to develop my skills, which is why I am looking for opportunities to grow!
 
+
 ◽  Working with JavaScript libraries like React 🛠️
 ◽  Creating responsive and accessible websites 🌐
 ◽  Continuously learning and keeping up with the latest trends in front end development 📚
