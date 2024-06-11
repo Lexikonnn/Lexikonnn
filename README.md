@@ -7,12 +7,8 @@ I am passionate about creating web applications and constantly strive to develop
 
 
 
-
-◽  Working with JavaScript libraries like React 🛠️
-
-◽  Creating responsive and accessible websites 🌐
-
-◽  Continuously learning and keeping up with the latest trends in front end development 📚
-
-◽  I am excited about opportunities that will allow me to grow and contribute to the success of interesting projects. ✔
+- Working with JavaScript libraries like React 🛠️
+- Creating responsive and accessible websites 🌐
+- Continuously learning and keeping up with the latest trends in front end development 📚
+- I am excited about opportunities that will allow me to grow and contribute to the success of interesting projects. ✔
 
