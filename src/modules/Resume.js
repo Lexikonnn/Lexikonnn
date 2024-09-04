@@ -45,9 +45,13 @@ const Resume = () => {
                         <div className='container-col'>
                             <h4 className="small-title">{t("resume.experience")}</h4>
                             <div className='wrapper-col'>
-                                <a className='invisible-link' href='https://www.boliga.cz/'><XpComponent year={2023} role="Front-end Developer" project="Sport club Metalurg | boliga.cz" /></a>
+                                <a className='invisible-link' href='https://www.boliga.cz/'>
+                                    <XpComponent year={2023} role="Front-end Developer" project="Sport club Metalurg | boliga.cz" />
+                                </a>
                                 <hr className='verti-line' />
-                                <XpComponent year={2024} role="Front-end Developer" project="9-TD Elite | Happy Boost" />
+                                <a className='invisible-link' href='https://github.com/Lexikonnn'>
+                                    <XpComponent year='Now' role="Git Hub" project="Take a look!" />
+                                </a>
                             </div>
                             <ResumeBlock title={t("resume.education")} content={t("resume.school")} />
                         </div>
@@ -58,7 +62,7 @@ const Resume = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 }
 

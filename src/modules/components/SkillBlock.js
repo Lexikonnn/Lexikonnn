@@ -132,7 +132,7 @@ const SkillBlock = () => {
                                     </div>
                                 </div>
                             </div>
-                            <p className='basic-text'>Figma | Adobe | C | Java | Typescript | Git | Docker | MySQL | PHP</p>
+                            <p className='basic-text'>Figma | Adobe | C | Java | Typescript | Git | Docker | MySQL | PHP | Node.js</p>
                         </div>
                         <h4 className="small-title">{t("resume.languages")}</h4>
                         <div className='wrapper-col'>
