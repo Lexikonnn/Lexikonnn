@@ -1,0 +1,21 @@
+footer {
+    width: 100%;
+    background: var(--soft-orange);
+    color: var(--black);
+    border: 2px solid var(--black);
+    border-left: none;
+    border-right: none;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-wrapper {
+    padding: 16px 0;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        width: calc(100% - 32px);
+    }
+}

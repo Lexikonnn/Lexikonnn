@@ -1,0 +1,29 @@
+.card-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 24px;
+    width: 100%;
+    background: var(--white);
+    border: 2px solid var(--black);
+    border-radius: 16px;
+}
+
+.card-container.row {
+    flex-direction: row;
+}
+
+.card-container.column {
+    flex-direction: column;
+}
+
+.card-wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 8px;
+    color: var(--black);
+    width: 100%;
+    max-width: 350px;
+}

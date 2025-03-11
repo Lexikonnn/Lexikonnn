@@ -1,0 +1,43 @@
+.reference-wrapper {
+    display: flex;
+    flex-direction: row; /* Výchozí: Obrázek vlevo, obsah vpravo */
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 100%;
+    gap: 24px;
+}
+
+/* Pokud je obrázek napravo, přidá se class "reverse" a otočí se pořadí */
+.reference-wrapper.reverse {
+    flex-direction: row-reverse; /* Obrázek bude na pravé straně */
+}
+
+.re-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 8px;
+    line-height: 40px;
+    max-width: 469px;
+}
+
+/* Obrázky v referencích */
+.reference-img {
+    max-width: 467px;
+    max-height: 280px;
+}
+
+/* 📱 Responzivita: Na mobilech se obsah změní na sloupec */
+@media (max-width: 768px) {
+    .reference-wrapper,
+    .reference-wrapper.reverse {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .reference-img {
+        max-width: 100%;
+    }
+}

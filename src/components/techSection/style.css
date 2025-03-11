@@ -1,0 +1,12 @@
+.tech-wrapper{
+    display: flex;
+    text-align: center;
+    gap: 8px;
+    flex-direction: column;
+    max-width: 300px;
+}
+
+.tech-icon{
+    height: 88px;
+    width: auto;
+}

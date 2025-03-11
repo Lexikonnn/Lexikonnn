@@ -1,0 +1,229 @@
+/* Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Grid Layout */
+body {
+    margin: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+/* Main Layout */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--soft-orange);
+    min-height: 100vh;
+}
+
+/* Grid Container */
+.main-container {
+    width: 100%;
+    max-width: 100vw;
+    /* Maximální šířka = celá obrazovka */
+    display: grid;
+    grid-template-columns: 80px 1fr 80px;
+    /* Střední sloupec se roztáhne */
+    height: 100%;
+}
+
+/* Wrapper pro obsah */
+.main-wrapper {
+    grid-column: 2;
+    /* Prostřední sloupec */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    margin-top: 160px;
+    margin-bottom: 160px;
+}
+
+.tech-container{
+    display: flex;
+    flex-direction: row;
+    gap: 44px;
+}
+
+.references-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 72px;
+    align-items: center;
+    width: 100%;
+    max-width: 1090px;
+    padding: 16px;
+}
+
+.landing-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    background-color: var(--soft-orange);
+    padding: 96px 0;
+}
+
+.left-container {
+    max-width: 900px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.right-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.button-wrapper {
+    width: fit-content;
+}
+
+/* Responzivní změna na mobilních zařízeních */
+@media (max-width: 768px) {
+    .main-container {
+        grid-template-columns: 8px 1fr 8px;
+    }
+
+    .button-wrapper {
+        width: 100%;
+    }
+
+    .button-wrapper button {
+        width: 100%;
+    }
+
+    .xxl-text {
+        font-size: 32px;
+        font-weight: bold;
+    }
+
+    .xl-text {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .md-text {
+        font-size: 18px;
+    }
+
+    .sm-text {
+        font-size: 16px;
+    }
+
+    .highlight {
+        font-size: 18px;
+    }
+
+    .tech-container{
+        flex-direction: column;
+        gap: 32px;
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+
+.manrope {
+    font-family: "Manrope", sans-serif;
+    font-weight: 800;
+}
+
+.inter {
+    font-family: "Inter", sans-serif;
+    font-weight: 100;
+}
+
+.lilita-one {
+    font-family: "Lilita One", serif;
+    font-weight: 400;
+    color: var(--white);
+    font-size: 40px;
+    letter-spacing: -2px;
+    -webkit-text-stroke: 2px var(--black);
+
+    text-shadow: 0px 5px 0px rgba(0, 0, 0, 1);
+}
+
+.xxl-text {
+    font-size: 64px;
+    font-weight: bold;
+}
+
+.xl-text {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.md-text {
+    font-size: 24px;
+}
+
+.sm-text {
+    font-size: 18px;
+}
+
+.highlight {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--orange);
+}
+
+.alert{
+    color: var(--red);
+}
+
+:root {
+    --soft-orange: #FFF7F3;
+    --soft-lime: #E9FFD8;
+    --soft-pink: #FFC9C9;
+    --lime: #CDFFA8;
+    --orange: #FF8B2B;
+    --black: #000000;
+    --white: #FFFFFF;
+    --red: #FF1A00;
+}
+
+.b-shadow {
+    box-shadow: 0px 6px 0px 0px rgba(0, 0, 0, 1);
+}
+
+.br-shadow {
+    box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 1);
+}
+
+
+.contact-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 72px ;
+}
+
+.white{
+    color: var(--white);
+}

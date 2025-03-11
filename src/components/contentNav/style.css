@@ -1,0 +1,45 @@
+.nav-container {
+    position: sticky;
+    display: flex;
+    top: 16px;
+    width: 100%;
+    justify-content: center;
+    z-index: 999;
+}
+
+.nav-wrapper {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--soft-orange);
+    border-radius: 999px;
+    gap: 10px;
+    padding: 8px;
+}
+
+.section-ref-wrapper {
+    background-color: var(--soft-orange);
+    padding: 8px 16px;
+    border-radius: 999px;
+    color: var(--black);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+
+}
+
+.section-ref-wrapper:hover {
+    color: var(--orange);
+}
+
+.section-ref-wrapper h3 {
+    font-weight: 100 !important;
+}
+
+.section-ref-wrapper.active h3 {
+    font-weight: bold !important;
+
+}
+
+.section-ref-wrapper.active {
+    background-color: var(--orange);
+    color: var(--white);
+}

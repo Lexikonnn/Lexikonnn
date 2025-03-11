@@ -1,0 +1,14 @@
+button {
+    background: var(--orange);
+    color: var(--black);
+    border: 2px solid var(--black);
+    border-radius: 999px;
+    cursor: pointer;
+    transition: 250ms;
+}
+
+button:hover {
+    transform: scale(1.1) rotate(-1.1deg);
+    background: var(--white);
+    color: var(--orange);
+}

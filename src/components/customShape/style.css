@@ -1,0 +1,39 @@
+.booble-wrapper {
+    position: absolute;
+    width: fit-content;
+    background: var(--soft-pink);
+    border: 2px solid var(--black);
+    padding: 4px 8px;
+    white-space: nowrap; /* Zabrání zalomení textu */
+}
+
+.shape-container {
+    position: relative;
+    padding: 0 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.custom-shape {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .shape-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .custom-shape {
+        max-width: 280px;
+    }
+
+    .booble-wrapper {
+        padding: 2px 6px;
+    }
+}
