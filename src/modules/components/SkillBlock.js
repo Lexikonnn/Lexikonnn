@@ -82,8 +82,8 @@ const SkillBlock = () => {
                                 <div className='skill-row'>
                                     <div id="code-skill" className="skill">
 
-                                        <div className="skill-bar  skill1" data-percent="89">
-                                            <span className="skill-count1">89%</span>
+                                        <div className="skill-bar  skill1" data-percent="95">
+                                            <span className="skill-count1">95%</span>
                                         </div>
                                     </div>
                                 </div>
@@ -93,8 +93,8 @@ const SkillBlock = () => {
                                 <div className='skill-row'>
                                     <div id="code-skill" className="skill">
 
-                                        <div className="skill-bar  skill1" data-percent="87">
-                                            <span className="skill-count1">87%</span>
+                                        <div className="skill-bar  skill1" data-percent="90">
+                                            <span className="skill-count1">90%</span>
                                         </div>
                                     </div>
                                 </div>
@@ -104,8 +104,8 @@ const SkillBlock = () => {
                                 <div className='skill-row'>
                                     <div id="code-skill" className="skill">
 
-                                        <div className="skill-bar  skill1" data-percent="39">
-                                            <span className="skill-count1">39%</span>
+                                        <div className="skill-bar  skill1" data-percent="45">
+                                            <span className="skill-count1">45%</span>
                                         </div>
                                     </div>
                                 </div>
@@ -115,8 +115,8 @@ const SkillBlock = () => {
                                 <div className='skill-row'>
                                     <div id="code-skill" className="skill">
 
-                                        <div className="skill-bar  skill1" data-percent="41">
-                                            <span className="skill-count1">41%</span>
+                                        <div className="skill-bar  skill1" data-percent="58">
+                                            <span className="skill-count1">58%</span>
                                         </div>
                                     </div>
                                 </div>
@@ -126,13 +126,13 @@ const SkillBlock = () => {
                                 <div className='skill-row'>
                                     <div id="code-skill" className="skill">
 
-                                        <div className="skill-bar  skill1" data-percent="25">
-                                            <span className="skill-count1">25%</span>
+                                        <div className="skill-bar  skill1" data-percent="23">
+                                            <span className="skill-count1">23%</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <p className='basic-text'>Figma | Adobe | C | Java | Typescript | Git | Docker | MySQL | PHP | Node.js</p>
+                            <p className='basic-text'>Figma | Adobe | C | Typescript | Git | Docker | MySQL | PHP | Node.js | Next.js | Tailwind</p>
                         </div>
                         <h4 className="small-title">{t("resume.languages")}</h4>
                         <div className='wrapper-col'>
@@ -150,8 +150,8 @@ const SkillBlock = () => {
                                 <div className='skill-row'>
                                     <div className="skill">
                                         <p>{t("resume.english")}</p>
-                                        <div className="skill-bar  skill1" data-percent="79">
-                                            <span className="skill-count1">79%</span>
+                                        <div className="skill-bar  skill1" data-percent="80">
+                                            <span className="skill-count1">80%</span>
                                         </div>
                                     </div>
                                 </div>
