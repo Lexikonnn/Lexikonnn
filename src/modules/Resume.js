@@ -54,6 +54,8 @@ const Resume = () => {
                                 </a>
                             </div>
                             <ResumeBlock title={t("resume.education")} content={t("resume.school")} />
+                            <ResumeBlock title="Courses" content="- Meta Front-End Developer Professional Certificate" />
+
                         </div>
                         <div className='container-col'>
                             <ResumeBlock title={t("resume.do")} content="Front-end Developer | HTML Coder | UX/UI Designer" />
