@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import TitleSection from "../components/titleSection/TitleSection";
 import Btn from "../components/button/Btn";
 import CustomShape from '../components/customShape/customShape';
@@ -7,8 +8,12 @@ import TechSection from "../components/techSection/TechSection";
 import ReferenceSection from "../components/referenceSection/ReferenceSection";
 import ContentNav from "../components/contentNav/ContentNav";
 import BeanArea from "../components/bean/BeanArea";
+import { Link } from "react-router";
 
 const Home = () => {
+
+    const [isVisible, setIsVisible] = useState(false);
+
     return (
         <div>
             <div className="landing-section">
@@ -21,7 +26,7 @@ const Home = () => {
                         </h3>
                     </div>
                     <div className="button-wrapper">
-                        <Btn size='lg' content='Hire Me?' />
+                        <Btn onClick={() => (window.location.href = "mailto:h.skrzeczek@gmail.com?subject=Interest in establishing cooperation.&body=More details...")} size='lg'>Hire Me?</Btn>
                     </div>
                 </div>
                 <div className="right-container">
@@ -61,7 +66,12 @@ const Home = () => {
             <div className="section" id="contact">
                 <TitleSection text="NOW YOUR TURN!" />
                 <div className="contact-wrapper">
-                    <Btn content='Get in touch' size='lg' />
+                    <Btn onClick={() => (setIsVisible(!isVisible))} size='lg' >Get in touch</Btn>
+                    <div className={`contacts-wrapper ${isVisible ? "isVisible" : ""}`}>
+                        <Btn>h.skrzeczek@gmail.com</Btn>
+                        <Btn>+420 731 002 086</Btn>
+                        <Btn><Link to="https://github.com/Lexikonnn" style={{ textDecoration: "none", color: "inherit" }} target="_blank" rel="noopener noreferrer">Github</Link></Btn>
+                    </div>
                     <p className="sm-text alert inter">Warning, this button can affect you dramatically!</p>
                 </div>
             </div>
