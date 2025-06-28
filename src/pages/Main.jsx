@@ -16,7 +16,7 @@ const Home = () => {
 
     return (
         <div>
-            <div className="landing-section">
+            <div className="landing-section" id="home">
                 <div className="left-container">
                     <div>
                         <h3 className="inter md-text">Hello, I'm Honza</h3>

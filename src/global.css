@@ -25,7 +25,6 @@ main {
 /* Grid Container */
 .main-container {
     width: 100%;
-    max-width: 100vw;
     display: grid;
     grid-template-columns: 80px 1fr 80px;
     height: 100%;
@@ -49,13 +48,28 @@ main {
     margin-bottom: 160px;
 }
 
-.tech-container{
+.tech-container {
     display: flex;
     flex-direction: row;
     gap: 44px;
 }
 
-.references-container{
+#my-stack {
+    padding: 40px 0 0 0;
+}
+#about-me {
+    padding: 40px 0 0 0;
+}
+
+#references {
+    padding: 40px 0 0 0;
+}
+
+#contact {
+    padding: 40px 0 0 0;
+}
+
+.references-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -114,18 +128,18 @@ main {
     justify-content: space-between;
 }
 
-.contacts-wrapper > * {
+.contacts-wrapper>* {
     opacity: 0;
     transform: translateY(-10px);
     transition: opacity 200ms ease, transform 200ms ease;
 }
 
-.contacts-wrapper.isVisible > * {
+.contacts-wrapper.isVisible>* {
     opacity: 1;
     transform: translateY(0);
 }
 
-.contacts-wrapper > button{
+.contacts-wrapper>button {
     background-color: #E9FFD8;
 }
 
@@ -165,7 +179,7 @@ main {
         font-size: 18px;
     }
 
-    .tech-container{
+    .tech-container {
         flex-direction: column;
         gap: 32px;
     }
@@ -221,7 +235,7 @@ main {
     color: var(--orange);
 }
 
-.alert{
+.alert {
     color: var(--red);
 }
 
@@ -245,14 +259,14 @@ main {
 }
 
 
-.contact-wrapper{
+.contact-wrapper {
     display: flex;
     flex-direction: column;
     text-align: center;
     gap: 16px;
-    margin-bottom: 72px ;
+    margin-bottom: 72px;
 }
 
-.white{
+.white {
     color: var(--white);
 }

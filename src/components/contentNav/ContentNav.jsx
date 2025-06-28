@@ -1,63 +1,73 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import './style.css';
 
-const sections = ["MY STACK", "ABOUT ME", "REFERENCES", "CONTACT"];
+const sections = ["", "MY STACK", "ABOUT ME", "REFERENCES", "CONTACT"];
 
 const ContentNav = () => {
-    const [activeSection, setActiveSection] = useState(sections[0]); // Výchozí první sekce
-    const [lastActiveSection, setLastActiveSection] = useState(sections[0]); // Poslední aktivní sekce
+    const [activeSection, setActiveSection] = useState(sections[0]);
+    const [lastActiveSection, setLastActiveSection] = useState(sections[0]);
 
     useEffect(() => {
         const handleScroll = () => {
-            let currentSection = "";
+            let currentSection = "home";
 
-            sections.forEach((section) => {
-                const element = document.getElementById(section.toLowerCase().replace(/\s+/g, "-"));
-                if (element) {
-                    const rect = element.getBoundingClientRect();
-                    if (rect.top <= 120 && rect.bottom >= 120) {
-                        currentSection = section;
+            if (window.scrollY === 0) {
+                currentSection = "home";
+            } else {
+                sections.forEach((section) => {
+                    const element = document.getElementById(section.toLowerCase().replace(/\s+/g, "-"));
+                    if (element) {
+                        const rect = element.getBoundingClientRect();
+                        if (rect.top <= 120 && rect.bottom >= 120) {
+                            currentSection = section;
+                        }
                     }
-                }
-            });
+                });
 
-            // 🛠 Pokud jsme na konci stránky, označíme "CONTACT" jako aktivní sekci
-            if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 10) {
-                currentSection = "CONTACT";
+                if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 10) {
+                    currentSection = "CONTACT";
+                }
             }
 
             if (currentSection) {
                 setActiveSection(currentSection);
                 setLastActiveSection(currentSection);
             } else {
-                setActiveSection(lastActiveSection); // Pokud není žádná sekce aktivní, zůstává poslední aktivní
+                setActiveSection(lastActiveSection);
             }
         };
 
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
-    }, [lastActiveSection]); // Sledujeme poslední aktivní sekci
+    }, [lastActiveSection]);
 
-    // 🛠 Klikací funkce pro navigaci
+
     const scrollToSection = (section) => {
         const element = document.getElementById(section.toLowerCase().replace(/\s+/g, "-"));
         if (element) {
-            element.scrollIntoView({ behavior: "smooth", block: "start" });
+            const offset = -115;
+            const y = element.getBoundingClientRect().top + window.scrollY + offset;
+            window.scrollTo({ top: y, behavior: 'smooth' });
         }
     };
 
     return (
         <div className='nav-container'>
-            <div className='nav-wrapper'>
+            <div className='nav-wrapper b-shadow'>
                 {sections.map((section) => (
                     <div
                         key={section}
-                        className={`section-ref-wrapper ${activeSection === section ? "active" : ""}`}
+                        className={`section-ref-wrapper ${(activeSection && activeSection === section) ? "active" : ""}`}
                         onClick={() => scrollToSection(section)}
                     >
                         <h3 className='sm-text manrope'>{section}</h3>
                     </div>
                 ))}
+                <div className="burger-wrapper">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
             </div>
         </div>
     );
