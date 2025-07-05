@@ -4,7 +4,7 @@
     background: var(--soft-pink);
     border: 2px solid var(--black);
     padding: 4px 8px;
-    white-space: nowrap; /* Zabrání zalomení textu */
+    white-space: nowrap;
 }
 
 .shape-container {
@@ -30,7 +30,7 @@
     }
 
     .custom-shape {
-        max-width: 280px;
+        width: auto;
     }
 
     .booble-wrapper {

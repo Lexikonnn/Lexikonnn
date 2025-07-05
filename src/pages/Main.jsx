@@ -47,7 +47,7 @@ const Home = () => {
                 <Bento />
             </div>
             <div className="section" id="references">
-                <TitleSection text="Let's take a look." />
+                <TitleSection text="My Career Pathway." />
                 <div className="references-container">
                     <ReferenceSection
                         title="Boliga.cz"
@@ -60,6 +60,12 @@ const Home = () => {
                         content="Fantasy Academy is the ultimate platform for football enthusiasts looking to master the art of strategic betting. Whether you’re a beginner or a seasoned bettor, our academy takes you deep into the intricate world of football analytics and strategy."
                         image="/assets/progress.png"
                         imagePosition="right"
+                    />
+                    <ReferenceSection
+                        title="Bohemia Interactive"
+                        content="As a QA at Bohemia Interactive, I contribute to the development of immersive games by ensuring quality and stability across builds. From exploratory testing to regression checks, I helped maintain the player experience at the highest standard in a fast-paced game dev environment."
+                        image="/assets/bohemia.png"
+                        imagePosition="left"
                     />
                 </div>
             </div>

@@ -31,3 +31,8 @@
     height: 250px; /* Udělá obrázek větší */
     object-fit: contain;
 }
+
+.card-wrapper p {
+    position: relative;
+    z-index: 3;
+}

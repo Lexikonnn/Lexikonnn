@@ -1,23 +1,13 @@
 import './style.css';
-import { useState } from 'react';
 
-const BurgerMenu = () => {
-
-    const [burgerOpen, setBurgerOpen] = useState(false);
-
-
-    const handleBurgerClick = () => {
-            setBurgerOpen(!burgerOpen);
-            console.log('state:',burgerOpen);
-    };
-
+const BurgerMenu = ({ isOpen }) => {
     return (
-        <div className={`burger-wrapper ${burgerOpen ? 'open' : ''}`} onClick={handleBurgerClick}>
+        <div className={`burger-wrapper ${isOpen ? 'open' : ''}`}>
             <div></div>
             <div></div>
             <div></div>
         </div>
     );
-}
+};
 
 export default BurgerMenu;

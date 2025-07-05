@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { scrollToSection } from '../../utils/scrollToSection';
 import './style.css';
 
 const sections = ["", "MY STACK", "ABOUT ME", "REFERENCES", "CONTACT"];
@@ -9,10 +10,10 @@ const ContentNav = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            let currentSection = "home";
+            let currentSection = "HOME";
 
             if (window.scrollY === 0) {
-                currentSection = "home";
+                currentSection = "HOME";
             } else {
                 sections.forEach((section) => {
                     const element = document.getElementById(section.toLowerCase().replace(/\s+/g, "-"));
@@ -42,15 +43,6 @@ const ContentNav = () => {
     }, [lastActiveSection]);
 
 
-    const scrollToSection = (section) => {
-        const element = document.getElementById(section.toLowerCase().replace(/\s+/g, "-"));
-        if (element) {
-            const offset = -115;
-            const y = element.getBoundingClientRect().top + window.scrollY + offset;
-            window.scrollTo({ top: y, behavior: 'smooth' });
-        }
-    };
-
     return (
         <div className='nav-container'>
             <div className='nav-wrapper b-shadow'>
@@ -63,11 +55,6 @@ const ContentNav = () => {
                         <h3 className='sm-text manrope'>{section}</h3>
                     </div>
                 ))}
-                <div className="burger-wrapper">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
             </div>
         </div>
     );
