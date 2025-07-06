@@ -51,16 +51,17 @@ header {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 64px;
-        height: 64px;
+        width: 72px;
+        height: 72px;
         padding: 12px;
-        background-color: var(--orange);
-        gap: 8px;
-        border-radius: 16px;
-        border: 2px solid var(--black);
-        box-shadow: 0px 6px 0px 0px rgba(0, 0, 0, 1);
+        gap: 16px;
         transition: 220ms;
         cursor: pointer;
+    }
+
+    .burger-wrapper.open div {
+        background-color: var(--white);
+
     }
 
 
@@ -68,9 +69,9 @@ header {
         position: absolute;
         top: 50%;
         left: 50%;
-        width: 40px;
+        width: 56px;
         height: 6px;
-        background-color: var(--white);
+        background-color: var(--black);
         border-radius: 16px;
         transform-origin: center;
         transition: transform 220ms ease, opacity 220ms ease;
@@ -118,8 +119,6 @@ header {
 
 
 .mobile-nav {
-    display: flex;
-    flex-direction: column;
     position: fixed;
     top: 0;
     left: 0;
@@ -128,12 +127,21 @@ header {
     background-color: var(--orange);
     backdrop-filter: blur(4px);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    opacity: 0;
+
+    transform: translateX(-100%);
+    opacity: 1;
     pointer-events: none;
-    transition: opacity 300ms ease;
+    transition: transform 400ms ease, opacity 400ms ease;
     z-index: 999;
+}
+
+.mobile-nav.open {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .mobile-nav ul {
@@ -183,14 +191,14 @@ header {
     text-align: center;
 }
 
-.mobile-nav ul li:hover {
-    background-color: var(--white);
-    border: 8px solid var(--white);
-    color: var(--dark-orange);
+.mobile-nav ul li.active {
+  background-color: var(--white);
+  border: 8px solid var(--white);
+  color: var(--dark-orange);
 }
 
-.mobile-nav ul li:hover a {
-    color: var(--dark-orange);
+.mobile-nav ul li.active a {
+  color: var(--dark-orange);
 }
 
 .mobile-social-wrapper {

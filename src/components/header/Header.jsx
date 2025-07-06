@@ -1,12 +1,22 @@
 import './style.css';
 import BurgerMenu from './BurgerMenu';
 import { useState } from 'react';
+import { useActiveSection } from '../../utils/useActiveSection';
 import { scrollToSection } from '../../utils/scrollToSection';
 import Logo from './Logo';
-import { Link } from 'react-router';
+
+
+const navItems = [
+  { label: "Home", section: "HOME" },
+  { label: "Stack", section: "MY STACK" },
+  { label: "About", section: "ABOUT ME" },
+  { label: "References", section: "REFERENCES" },
+];
+
 
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
+      const activeSection = useActiveSection();
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
@@ -23,10 +33,18 @@ const Header = () => {
             <nav className={`mobile-nav ${menuOpen ? 'open' : ''}`}>
                 <div className='mobile-nav-wrapper'>
                     <ul className='manrope'>
-                        <li onClick={() => { scrollToSection("HOME"); setMenuOpen(false); }}><a>Home</a></li>
-                        <li onClick={() => { scrollToSection("MY STACK"); setMenuOpen(false); }}><a>Stack</a></li>
-                        <li onClick={() => { scrollToSection("ABOUT ME"); setMenuOpen(false); }}><a>About</a></li>
-                        <li onClick={() => { scrollToSection("REFERENCES"); setMenuOpen(false); }}><a>References</a></li>
+                        {navItems.map(({ label, section }) => (
+                            <li
+                                key={section}
+                                onClick={() => {
+                                    scrollToSection(section);
+                                    setMenuOpen(false);
+                                }}
+                                className={activeSection === section ? 'active' : ''}
+                            >
+                                <a>{label}</a>
+                            </li>
+                        ))}
                     </ul>
                 </div>
                 <div className='mobile-social-container'>

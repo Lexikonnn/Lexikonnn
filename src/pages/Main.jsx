@@ -7,13 +7,8 @@ import Bento from "../components/bento/Bento";
 import TechSection from "../components/techSection/TechSection";
 import ReferenceSection from "../components/referenceSection/ReferenceSection";
 import ContentNav from "../components/contentNav/ContentNav";
-import BeanArea from "../components/bean/BeanArea";
-import { Link } from "react-router";
 
 const Home = () => {
-
-    const [isVisible, setIsVisible] = useState(false);
-
     return (
         <div>
             <div className="landing-section" id="home">
@@ -47,7 +42,7 @@ const Home = () => {
                 <Bento />
             </div>
             <div className="section" id="references">
-                <TitleSection text="My Career Pathway." />
+                <TitleSection text="My Pathway." />
                 <div className="references-container">
                     <ReferenceSection
                         title="Boliga.cz"
@@ -67,18 +62,6 @@ const Home = () => {
                         image="/assets/bohemia.png"
                         imagePosition="left"
                     />
-                </div>
-            </div>
-            <div className="section" id="contact">
-                <TitleSection text="NOW YOUR TURN!" />
-                <div className="contact-wrapper">
-                    <Btn onClick={() => (setIsVisible(!isVisible))} size='lg' >Get in touch</Btn>
-                    <div className={`contacts-wrapper ${isVisible ? "isVisible" : ""}`}>
-                        <Btn>h.skrzeczek@gmail.com</Btn>
-                        <Btn>+420 731 002 086</Btn>
-                        <Btn><Link to="https://github.com/Lexikonnn" style={{ textDecoration: "none", color: "inherit" }} target="_blank" rel="noopener noreferrer">Github</Link></Btn>
-                    </div>
-                    <p className="sm-text alert inter">Warning, this button can affect you dramatically!</p>
                 </div>
             </div>
         </div>
