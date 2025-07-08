@@ -1,5 +1,6 @@
 .card-container {
     display: flex;
+    justify-content: row;
     align-items: center;
     justify-content: center;
     gap: 40px;
@@ -26,4 +27,27 @@
     color: var(--black);
     width: 100%;
     max-width: 350px;
+}
+
+@media (max-width: 850px) {
+    .card-container.row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .card-wrapper {
+        text-align: left;
+    }
+
+    .img-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .responsive-img {
+        max-width: 80%;
+        height: auto;
+    }
 }
