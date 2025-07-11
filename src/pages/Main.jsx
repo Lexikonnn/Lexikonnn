@@ -13,7 +13,7 @@ const Home = () => {
         <div>
             <div className="landing-section" id="home">
                 <div className="left-container">
-                    <div>
+                    <div className="left-wrapper">
                         <h3 className="inter md-text">Hello, I'm Honza</h3>
                         <h1 className="manrope xxl-text">Born to design & develop webs.</h1>
                         <h3 className="inter md-text">
@@ -21,7 +21,7 @@ const Home = () => {
                         </h3>
                     </div>
                     <div className="button-wrapper">
-                        <Btn onClick={() => (window.location.href = "mailto:h.skrzeczek@gmail.com?subject=Interest in establishing cooperation.&body=More details...")} size='lg'>Hire Me?</Btn>
+                        <Btn onClick={() => (window.location.href = "mailto:h.skrzeczek@gmail.com?subject=Interest in establishing cooperation.&body=More details...")} size='lg'>Hire Me!</Btn>
                     </div>
                 </div>
                 <div className="right-container">
@@ -30,7 +30,7 @@ const Home = () => {
             </div>
             <ContentNav />
             <div className="section" id="my-stack">
-                <TitleSection text="What I use?" />
+                <TitleSection text="Technologies" />
                 <div className="tech-container">
                     <TechSection title="FRAMEWORKS" content="Good experience in React.Js and Next.Js" icon="/assets/reactIcon.svg" />
                     <TechSection title="NODE.JS" content="Basics knowledge of Express.Js" icon="/assets/nodeIcon.svg" />
@@ -38,11 +38,11 @@ const Home = () => {
                 </div>
             </div>
             <div className="section" id="about-me">
-                <TitleSection text="What am I capable of?" />
+                <TitleSection text="My Capabilities" />
                 <Bento />
             </div>
             <div className="section" id="references">
-                <TitleSection text="My Pathway." />
+                <TitleSection text="Career" />
                 <div className="references-container">
                     <ReferenceSection
                         title="Boliga.cz"

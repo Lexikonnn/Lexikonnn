@@ -9,13 +9,13 @@
     background: #1F1F1F;
     border: 2px solid var(--black);
     border-radius: 16px;
-    overflow: hidden; /* Povolit přesah */
+    overflow: hidden;
 }
 
 .area-wrapper {
     position: relative;
     width: 100%;
-    height: 200px; /* Stejná výška jako .img-wrapper v Card */
+    height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -23,16 +23,38 @@
 }
 
 .beans-img {
-    position: absolute; /* Umožní volné umístění */
-    top: -40px; /* Posune obrázek nahoru */
-    left: -30px; /* Posune obrázek doleva */
-    max-width: none; /* Zruší omezení šířky */
-    width: 250px; /* Udělá obrázek větší */
-    height: 250px; /* Udělá obrázek větší */
+    position: absolute;
+    top: -40px;
+    left: -30px;
+    max-width: none;
+    width: 250px;
+    height: 250px;
     object-fit: contain;
 }
 
-.card-wrapper p {
+.card-wrapper-bento p {
     position: relative;
     z-index: 3;
+}
+
+.card-wrapper-bento {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 8px;
+    color: var(--black);
+    width: 100%;
+    max-width: 350px;
+}
+
+@media (max-width: 850px) {
+    .bean-card-container{
+        align-items: flex-start;
+    }
+
+    .card-wrapper-bento{
+        display: flex;
+        justify-content: flex-end;
+        height: 100%;
+    }
 }

@@ -2,9 +2,9 @@ import './style.css';
 import '../../global.css';
 import React from 'react';
 
-const Card = ({ children, title, content, orientation = 'row' }) => {
+const Card = ({ children, title, content, orientation = 'row', mobileOrientation = 'column', customMobile }) => {
     return (
-        <div className={`card-container br-shadow ${orientation === 'column' ? 'column' : 'row'}`}>
+        <div className={`card-container br-shadow ${orientation} mobile-${mobileOrientation} ${customMobile ? `mobile-custom-${customMobile}` : ''}`}>
             <div className='img-wrapper'>
                 {React.isValidElement(children) ? React.cloneElement(children, { className: 'responsive-img' }) : null}
             </div>
@@ -16,6 +16,6 @@ const Card = ({ children, title, content, orientation = 'row' }) => {
             </div>
         </div>
     );
-}
+};
 
 export default Card;
