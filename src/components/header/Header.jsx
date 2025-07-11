@@ -1,4 +1,5 @@
 import './style.css';
+import { useEffect } from 'react';
 import BurgerMenu from './BurgerMenu';
 import { useState } from 'react';
 import { useActiveSection } from '../../utils/useActiveSection';
@@ -7,20 +8,32 @@ import Logo from './Logo';
 
 
 const navItems = [
-  { label: "Home", section: "HOME" },
-  { label: "Stack", section: "MY STACK" },
-  { label: "About", section: "ABOUT ME" },
-  { label: "References", section: "REFERENCES" },
+    { label: "Home", section: "HOME" },
+    { label: "Stack", section: "MY STACK" },
+    { label: "About", section: "ABOUT ME" },
+    { label: "References", section: "REFERENCES" },
 ];
 
 
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
-      const activeSection = useActiveSection();
+    const activeSection = useActiveSection();
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     };
+
+    useEffect(() => {
+        if (menuOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+
+        return () => {
+            document.body.style.overflow = '';
+        };
+    }, [menuOpen]);
 
     return (
         <header className=''>

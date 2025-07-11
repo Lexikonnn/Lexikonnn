@@ -70,3 +70,11 @@
         max-width: 50%;
     }
 }
+
+
+
+@media (max-width: 364px) {
+    .bento-inner-wrapper.side-by-side > div {
+        max-width: 100%;
+    }
+}
