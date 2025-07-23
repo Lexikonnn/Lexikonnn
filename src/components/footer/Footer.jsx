@@ -8,7 +8,7 @@ const Footer = () => {
                 <div className='footer-wrapper inter'>
                     <div>
                         <h3>Call Me</h3>
-                        <a href="tel:+420731002086">+420 731 002</a>
+                        <a href="tel:+420731002086">+420 731 002 086</a>
                     </div>
                     <div>
                         <h3>Mail Me</h3>
